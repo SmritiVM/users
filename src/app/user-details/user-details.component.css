@@ -2,6 +2,11 @@
     margin: 0.3px;
     font-family: "Ubuntu Mono";
 }
+
+h2{
+    text-align: center;
+    padding: 10px;
+}
 .user-table{
     border-collapse: collapse;
 }
