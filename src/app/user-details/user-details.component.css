@@ -1,0 +1,31 @@
+*{
+    margin: 0.3px;
+    font-family: "Ubuntu Mono";
+}
+.user-table{
+    border-collapse: collapse;
+}
+
+.user-table th{
+    background-color: rgb(44, 32, 92);
+    padding: 8px;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 16px;
+    border: 1px solid rgb(44, 32, 92);
+}
+
+.user-table td{
+    padding: 8px;
+    color: #393838;
+	border: 1px solid #dddfe1;
+    font-size: 14px;
+}
+
+.user-table tbody tr{
+    background-color: #80b5ea;
+}
+
+.user-table tbody tr:nth-child(odd){
+    background-color: #c0d5ef;
+}
