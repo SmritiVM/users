@@ -32,24 +32,6 @@
                 class="alert alert-danger">Email is required</div>
             </div>
 
-            <!-- <label>Address</label> -->
-            <!-- Street -->
-            <!-- <div class="form-group">
-                <label for="street">Street</label>
-                <input type="text" class="form-control" id="street"
-                required [(ngModel)] = "user.address.street" name="street"
-                #street="ngModel">
-                <div [hidden]="street.valid || street.pristine"
-                class="alert alert-danger">Street is required</div>
-            </div> -->
-
-            <!-- Suite -->
-            <!-- City -->
-            <!-- Zipcode -->
-            <!-- Lat -->
-            <!-- Lng -->
-            <!-- <hr> -->
-            <!-- Phone -->
             <div class="form-group">
                 <label for="phone">Phone</label>
                 <input type="text" class="form-control" id="phone"
@@ -69,10 +51,6 @@
                 class="alert alert-danger">Website is required</div>
             </div>
 
-            <!-- <label>Company</label> -->
-            <!-- name -->
-            <!-- catchphrase -->
-            <!-- bs -->
             <button type="submit" class="btn btn-success"
             [disabled]="!userForm.form.valid">Submit</button>
         </form>
