@@ -14,9 +14,9 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let user of users">
+        <tr>
             <td>{{user.id}}</td>
-            <td><a routerLink="/user/{{user.id}}">{{user.name}}</a></td>
+            <td>{{user.name}}</td>
             <td>{{user.username}}</td>
             <td>{{user.email}}</td>
             <td>{{user.address.street}}, {{user.address.suite}}, {{user.address.city}}, {{user.address.zipcode}}
@@ -31,10 +31,5 @@
         </tr>
         </tbody>
     </table>
-  <!-- <ul>
-    <li *ngFor="let user of users">
-      {{user.id}}
-      {{user.username}}
-    </li>
-  </ul> -->
+
 </div>
