@@ -1,22 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+// import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { UserService } from '../user.service';
 import { User } from '../user';
 
 @Component({
   selector: 'app-user-details',
   standalone: true,
-  imports: [HttpClientModule, CommonModule],
+  imports: [CommonModule],
   templateUrl: './user-details.component.html',
   styleUrl: './user-details.component.css'
 })
 export class UserDetailsComponent implements OnInit{
   users: User[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.http.get<User[]>('https://jsonplaceholder.typicode.com/users')
+    this.userService.fetchUsers()
       .subscribe(data => {
         this.users = data;
       });
