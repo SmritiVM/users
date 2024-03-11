@@ -1,0 +1,42 @@
+<h2>User {{id}}</h2>
+<table class="user-table">
+    <tr>
+        <th>ID</th>
+        <td>{{user.id}}</td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <td>{{user.name}}</td>
+    </tr>
+    <tr>
+        <th>Username</th>
+        <td>{{user.username}}</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>{{user.email}}</td> 
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td>{{user.address.street}}, {{user.address.suite}}, {{user.address.city}}, {{user.address.zipcode}}
+            <br>
+            Lat: {{user.address.geo.lat}}, Lng: {{user.address.geo.lng}}
+        </td>
+    </tr>
+    <tr>
+        <th>Phone</th>
+        <td>{{user.phone}}</td>
+    </tr>
+    <tr>
+        <th>Website</th>
+        <td>{{user.website}}</td>
+    </tr>
+    <tr>
+        <th>Company</th>
+        <td>{{user.company.name}}
+            <br>{{user.company.catchPhrase}}, {{user.company.bs}}
+        </td>
+    </tr>
+
+
+</table>
