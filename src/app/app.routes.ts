@@ -6,6 +6,6 @@ import { UserComponent } from './user/user.component';
 export const routes: Routes = [
     { path: '', redirectTo:'/dashboard', pathMatch: 'full'},
     { path: 'dashboard', component: UserDetailsComponent},
-    { path: 'user', component: UserComponent}
+    { path: 'user/:id', component: UserComponent}
 ];
 

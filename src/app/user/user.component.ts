@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { UserService } from '../user.service';
 import { User } from '../user';
@@ -14,8 +15,10 @@ import { Geo } from '../user';
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
+
 export class UserComponent implements OnInit{
-  id: number = 2;
+  // user: User | undefined;
+  // id: number = 2;
   geo: Geo = {
     lat: '',
     lng: ''
@@ -46,13 +49,19 @@ export class UserComponent implements OnInit{
     company: this.company
   }
 
-  constructor(private userService: UserService){}
+  constructor(
+    private route: ActivatedRoute,
+    private userService: UserService
+    ){}
 
   ngOnInit(): void {
-      this.userService.fetchUser(this.id)
-      .subscribe(data => {
-        this.user  = data;
-      })
+      this.getUser();
+  }
+
+  getUser(): void{
+    const id = parseInt(this.route.snapshot.paramMap.get('id')!);
+    this.userService.fetchUser(id).subscribe(user => this.user = user);
+
   }
 
 

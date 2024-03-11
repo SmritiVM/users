@@ -17,7 +17,7 @@
         <tr *ngFor="let user of users">
             <td>{{user.id}}</td>
             <td>
-              <a routerLink = "/user" routerLinkActive = "active">
+              <a routerLink = "/user/{{user.id}}" routerLinkActive = "active">
               {{user.name}}
             </a>
           </td>
